@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>McAfee (Unofficial) IRC</title>
+    <style>
+        #foreground {
+            background-color: white;
+        }
+
+        body {
+            background-color: lightgray;
+        }
+
+        .sidebar {
+            width: 12%;
+            position: fixed;
+            z-index: 0;
+            top: 0;
+            right: 0;
+            height: 97%;
+        }
+
+        .users {
+            height: 100%;
+            margin: 5%;
+            border: 1px;
+            border-style: solid;
+            border-color: darkgray;
+        }
+
+        .userlist {
+            margin: 1.5% 6% 1.5% 6%
+        }
+
+        .main {
+            margin-right: 13%;
+            z-index: 1;
+            display: flex;
+            flex-flow: column;
+            height: 100%;
+        }
+
+        .main .row {
+            background-color: white;
+            border-width: 1px;
+            border-style: solid;
+            border-color: darkgray;
+            padding: 0.3% 0.5% 0.3% 0.5%;
+        }
+
+        .main .row.topic {
+            margin-bottom: 5px;
+            flex: 0 1 auto;
+        }
+
+        .main .row.chat {
+            margin-bottom: 5px;
+            flex: 1 1 auto;
+        }
+
+        .main .row.input {
+            flex: 0 1 auto
+        }
+
+        .inputarea {
+            width: 100%;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <script>
+        function sendmsg(){
+            alert($("input:first").val());
+        }
+    </script>
+
+    <div class="main">
+        <div class="topic row">Welcome to McAfee Interns - siezures</div>
+        <div class="chat row"></div>
+
+        <form action="javascript:sendmsg();" class="input row">
+            <input type="text" name="msg" style="width:100%" required autofocus>
+        </form>
+
+        <!--
+        <form action= class="input row" method="POST" id="myform">
+            <input type="text" name="msg" style="width:100%" required autofocus>
+        </form>-->
+    </div>
+
+    <div class="sidebar">
+        <div class="users" id="foreground">
+            <div class="userlist">
+                mlee2
+                <br /> John
+                <br /> McAfee
+                <br />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

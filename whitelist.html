@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>McAfee Whitelist Test</title>
+    <script>
+        
+        function script() {
+            setTimeout(sendGet, 100)
+        }
+
+        function sendGet() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", window.location.href, true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+            xhr.send("hello");
+        }
+
+    </script>
+</head>
+
+<body onload="script()">
+    <div style="text-align: center">
+        <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:firebrick; font-weight: bold; font-size: 5em; line-height: 100%">
+            McAfee
+        </div>
+        <div style="font-size: 1.4em" id="slogan">Together is power</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+div.channels {
+    border: 1px solid black;
+    outline-style: solid;
+    outline-color: aqua;
+}
+
+div.users {
+    border: 1px solid black;
+    outline-style: solid;
+    outline-color: brown;
+}

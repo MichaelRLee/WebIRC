@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>McAfee Whitelist Test</title>
+    <script>
+        
+        function disco() {
+            setInterval(textColor, 500);
+            setInterval(bodyColor, 500);
+        }
+
+        function textColor() {
+            document.getElementById("slogan").style.color = getRandomColor();
+        }
+
+        function bodyColor() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+    </script>
+</head>
+
+<body onload="disco()">
+    <div style="text-align: center">
+        <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:firebrick; font-weight: bold; font-size: 5em; line-height: 100%">
+            McAfee
+        </div>
+        <div style="font-size: 1.4em" id="slogan">Together is power</div>
+    </div>
+</body>
+
+</html>
